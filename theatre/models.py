@@ -97,8 +97,8 @@ class Reservation(models.Model):
 class Ticket(models.Model):
     row = models.PositiveIntegerField()
     seat = models.PositiveIntegerField()
-    performance = models.ForeignKey(Performance, on_delete=models.CASCADE)
-    reservation = models.ForeignKey(Reservation, on_delete=models.CASCADE)
+    performance = models.ForeignKey(Performance, on_delete=models.CASCADE, related_name="tickets")
+    reservation = models.ForeignKey(Reservation, on_delete=models.CASCADE, related_name="tickets")
 
     class Meta:
         unique_together = ("performance", "row", "seat")

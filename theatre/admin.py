@@ -11,10 +11,10 @@ from .models import (
 
 # Register your models here.
 
-admin.register(Play)
-admin.register(Actor)
-admin.register(TheatreHall)
-admin.register(Performance)
-admin.register(Ticket)
-admin.register(Reservation)
-admin.register(Genre)
+admin.site.register(Play)
+admin.site.register(Actor)
+admin.site.register(TheatreHall)
+admin.site.register(Performance)
+admin.site.register(Ticket)
+admin.site.register(Reservation)
+admin.site.register(Genre)
